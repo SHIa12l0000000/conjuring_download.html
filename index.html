@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Download</title>
+  <title>Fake Download</title>
   <style>
     body {
       background: #000;
@@ -10,25 +10,30 @@
       text-align: center;
       padding: 30px;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-    }
     img {
       max-width: 100%;
       border: 3px solid darkred;
       border-radius: 10px;
       margin-bottom: 20px;
     }
-    h1 {
-      font-size: 70px;
-      color: darkred;
-      margin: 20px 0;
-    }
-    h2 {
-      font-size: 40px;
+    #downloadBtn {
+      display: inline-block;
+      font-size: 60px;
       color: #fff;
-      margin: 10px 0 30px;
+      background: darkred;
+      padding: 20px 40px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #downloadBtn:hover {
+      background: crimson;
+    }
+    #messages {
+      display: none;
+      margin-top: 40px;
     }
     .funny {
       font-size: 35px;
@@ -39,21 +44,29 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- GitHub Image -->
-    <img src="https://raw.githubusercontent.com/yourusername/yourrepo/main/The-Conjuring-4-Last-Rites.webp" 
-         alt="The Conjuring: Last Rites">
 
-    <!-- Download text -->
-    <h1>DOWNLOAD</h1>
-    <h2>The Conjuring: Last Rites</h2>
+  <!-- Poster -->
+  <img src="The-Conjuring-4-Last-Rites.webp" alt="The Conjuring: Last Rites">
 
-    <!-- Funny messages -->
+  <!-- Download Button -->
+  <a id="downloadBtn">DOWNLOAD</a>
+  <h2>The Conjuring: Last Rites</h2>
+
+  <!-- Funny Messages -->
+  <div id="messages">
     <div class="funny">😂 Time pass mat kar, thoda padh le!</div>
     <div class="funny">📚 Exam pass karne ka asli horror yahi hai!</div>
     <div class="funny">😆 Notes khol le... warna mummy ko bula lunga!</div>
     <div class="funny">🎯 Download ka sapna chhod, knowledge download kar!</div>
     <div class="funny">👻 Padhai ignore ki toh result tumhe dara dega!</div>
   </div>
+
+  <script>
+    document.getElementById("downloadBtn").onclick = function() {
+      document.getElementById("downloadBtn").style.display = "none"; // hide button
+      document.getElementById("messages").style.display = "block";  // show funny messages
+    };
+  </script>
+
 </body>
 </html>
